@@ -7,7 +7,8 @@ Os membros do grupo são:
 <br>
 -Jonathan Nascimento Carvalho
 <br>
-
+<hr>
+<br>
 O Projeto será escrito usando o framework de PHP chamado CodeIgniter, usando também html/css,
 javascript e o framework de formatação bootstrap.
 
