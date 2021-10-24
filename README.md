@@ -7,6 +7,7 @@ Os membros do grupo são:
 <br>
 -Jonathan Nascimento Carvalho
 <br>
+-Rayner Gabriel Taniguchi
 <hr>
 <br>
 O Projeto será escrito usando o framework de PHP chamado CodeIgniter, usando também html/css,
