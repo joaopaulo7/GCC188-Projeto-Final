@@ -1,6 +1,6 @@
 <?php
 
-    class MenuAdm extends CI_Controller {
+    class Administrador extends CI_Controller {
 
         public $categorias;
 
