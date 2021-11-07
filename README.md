@@ -1,5 +1,10 @@
 # GCC188-Projeto-Final
-Repositório para o trabalho final de Engenharia de Software UFLA 2021/1
+<h3>Repositório para o trabalho final de Engenharia de Software UFLA 2021/1</h3>
+  
+ <h2>Strem Games</h2>
+  <p>  Strem Games é uma loja virtual de jogos clássicos. Nosso jogos são vendidos estritamente em formato digital
+  na loja, o cliente pode consultar os mais diversos jogos no catálogo ou filtar por consoles, categorias e até desenvolvedoras!
+  Uma vez que o cliente tiver comprado um jogo ele poderá acessá-lo por sua bibliotéca e baixar os conteúdos sempre que quiser!</p>
 
 
 <h2>Membros do grupo:</h2>
@@ -21,10 +26,10 @@ Repositório para o trabalho final de Engenharia de Software UFLA 2021/1
 
 <h2>Linguagens Utilizadas</h2>
 <ul>
-  <li>PHP</li>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JavaScript</li>
+  <li>PHP 7.4.25</li>
+  <li>HTML5</li>
+  <li>CSS 3</li>
+  <li>JavaScript 1.8.5</li>
 </ul>
 
 <br>
