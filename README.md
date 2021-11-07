@@ -37,6 +37,6 @@
 
 <h2>Dados do Servidor:</h2>
 <ul>
-  <li><b>Servidor:</b> Apache 2.4.43 </li>
+  <li><b>Servidor:</b> Apache 2.4.51 </li>
   <li><b>Sis. de Banco de dados:</b> MySQL 8.0.27</li>
 </ul>
