@@ -30,7 +30,7 @@
   <li>PHP 7.4.25</li>
   <li>HTML5</li>
   <li>CSS 3</li>
-  <li>JavaScript 1.8.5</li>
+  <li>JavaScript 1.5</li>
 </ul>
 
 <br>
