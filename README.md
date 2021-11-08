@@ -1,7 +1,7 @@
 # GCC188-Projeto-Final
 <h3>Repositório para o trabalho final de Engenharia de Software UFLA 2021/1</h3>
   
- <h2>Strem Games</h2>
+ <h2>Strem Games 🎮</h2>
   <p>  Strem Games é uma loja virtual de jogos clássicos. Nosso jogos são vendidos estritamente em formato digital
   na loja, o cliente pode consultar os mais diversos jogos presentes no catálogo ou filtar por consoles, categorias ou desenvolvedoras.
   Uma vez que o cliente tiver comprado um jogo ele poderá acessá-lo por sua bibliotéca e baixar os conteúdos sempre que quiser!
