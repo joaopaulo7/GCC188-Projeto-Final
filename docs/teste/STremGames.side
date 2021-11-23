@@ -1,0 +1,512 @@
+{
+  "id": "4176706b-9c93-4ca1-9953-bf4cf2545cf3",
+  "version": "2.0",
+  "name": "STremGames",
+  "url": "http://localhost/StremGames/",
+  "tests": [{
+    "id": "b5f4b964-cc46-4934-9e82-6a9e6f235142",
+    "name": "login Cliente",
+    "commands": [{
+      "id": "62ca4e8d-e899-4772-ad1e-ea0428bc1ad7",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/StremGames/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c1d7b84-68c6-4fd4-9d9a-f60046a0a26f",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=bt-login",
+      "targets": [
+        ["id=bt-login", "id"],
+        ["css=#bt-login", "css:finder"],
+        ["xpath=//button[@id='bt-login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e14eb4e7-2998-442a-9817-a85d2a48ccf3",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [],
+      "value": "joaopaulo7testes@gmail.com"
+    }, {
+      "id": "29f7f967-7bbd-4bf8-abf8-902cc926aed0",
+      "comment": "",
+      "command": "type",
+      "target": "id=senha",
+      "targets": [],
+      "value": "minha senha"
+    }, {
+      "id": "c08b9399-5c1e-4d67-a306-092dcf46553a",
+      "comment": "",
+      "command": "click",
+      "target": "name=btnLogin",
+      "targets": [
+        ["name=btnLogin", "name"],
+        ["xpath=(//input[@id='senha'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='form_login']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e46695fa-6b76-4923-91b3-469322b15a88",
+    "name": "logout",
+    "commands": [{
+      "id": "82eec70f-e628-43d3-aa33-a1c30eab5841",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/StremGames/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc8b06f3-813b-4e46-b3bb-5d3873eeeb30",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(2) > img",
+      "targets": [
+        ["css=a:nth-child(2) > img", "css:finder"],
+        ["xpath=//img[contains(@src,'http://localhost/StremGames/assets/open-iconic/png/account-logout-3x.png')]", "xpath:img"],
+        ["xpath=//a[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "14506979-d43a-4e74-9a82-7f7df40bdf16",
+    "name": "login administrador",
+    "commands": [{
+      "id": "ad9b2e1b-1f90-4460-857f-a4dcdea4ce53",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/StremGames/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c521996b-33d2-401b-ba61-e03b3699d834",
+      "comment": "",
+      "command": "clickAt",
+      "target": "id=bt-login",
+      "targets": [
+        ["id=bt-login", "id"],
+        ["css=#bt-login", "css:finder"],
+        ["xpath=//button[@id='bt-login']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a3524c4-9e7c-44b7-a0d3-7f7922187307",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [],
+      "value": "adm@eusouoadm.adm"
+    }, {
+      "id": "bf2ab0b4-0340-44ad-8d15-a478a2e50af7",
+      "comment": "",
+      "command": "type",
+      "target": "id=senha",
+      "targets": [],
+      "value": "minha senha"
+    }, {
+      "id": "ef787419-10d7-41db-87ee-ab5e089f120e",
+      "comment": "",
+      "command": "click",
+      "target": "name=btnLogin",
+      "targets": [
+        ["name=btnLogin", "name"],
+        ["xpath=(//input[@id='senha'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='form_login']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "969b6114-7310-45cf-8a37-6ce33fbfea92",
+    "name": "criar console",
+    "commands": [{
+      "id": "f152a229-b212-4c46-8486-25dbf7b49f23",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/StremGames/administrador",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2283d2fe-4682-4a39-8751-c564a3adbee3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(3) > .col:nth-child(2) .botao-form-inverso",
+      "targets": [
+        ["css=.row:nth-child(3) > .col:nth-child(2) .botao-form-inverso", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='homebody']/div[2]/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Consoles')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2092d5c-fbff-4ce2-b2a4-f5d94c6929fc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Criar novo",
+      "targets": [
+        ["linkText=Criar novo", "linkText"],
+        ["css=.botao-form", "css:finder"],
+        ["xpath=//a[contains(text(),'Criar novo')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost/StremGames/administrador/adiciona_console']", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Criar novo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db4f3e60-ea61-4a3c-9582-f85ed6970762",
+      "comment": "",
+      "command": "click",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f759bb4-6121-4fc0-afcb-1908eb7cc1b8",
+      "comment": "",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Novo console"
+    }, {
+      "id": "94f7303a-adb7-4001-87d4-c6e1a9fec7a2",
+      "comment": "",
+      "command": "type",
+      "target": "id=descricao",
+      "targets": [
+        ["id=descricao", "id"],
+        ["name=descricao", "name"],
+        ["css=#descricao", "css:finder"],
+        ["xpath=//textarea[@id='descricao']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Essa é uma descrição para um novo console."
+    }, {
+      "id": "d130be50-e8e9-46e7-bee6-462ce183947b",
+      "comment": "",
+      "command": "click",
+      "target": "name=btn_cadastrar",
+      "targets": [
+        ["name=btn_cadastrar", "name"],
+        ["css=.botao-confirmacao", "css:finder"],
+        ["xpath=//input[@name='btn_cadastrar']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9d6c5b08-d614-4a80-a06d-9ff01140baef",
+    "name": "remover console",
+    "commands": [{
+      "id": "29b03591-bce7-4c51-a99b-e0783083240c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/StremGames/administrador",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f1444c7-7fb8-442d-93c7-d1eccfa9cfbf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1005x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f28be391-109e-49c0-af5e-eef83e49b041",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(3) > .col:nth-child(2) .botao-form-inverso",
+      "targets": [
+        ["css=.row:nth-child(3) > .col:nth-child(2) .botao-form-inverso", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='homebody']/div[2]/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Consoles')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4148140-ed64-4f3a-9a1b-24aac9bc5ed8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(11) .botao-del",
+      "targets": [
+        ["css=.row:nth-child(11) .botao-del", "css:finder"],
+        ["xpath=(//a[contains(text(),'Remover')])[3]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost/StremGames/administrador/remove_console/8']", "xpath:href"],
+        ["xpath=//div[5]/div[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b94b0e9-7445-40f2-8429-59c08036884e",
+      "comment": "",
+      "command": "click",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6dccf176-b923-4fcf-bd92-bd04f3753023",
+      "comment": "",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Console"
+    }, {
+      "id": "bc0d1037-69b7-44d1-8458-0cdd709dd5d6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_DOWN}"
+    }, {
+      "id": "fce27366-3cdc-4c2f-b99b-33545adf7537",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "${KEY_DOWN}"
+    }, {
+      "id": "5b579d4a-eafa-4466-8ba8-5ded1ec75cbd",
+      "comment": "",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Console Alterado"
+    }, {
+      "id": "412337b1-7cc8-4e47-8d4a-5832381f8ce4",
+      "comment": "",
+      "command": "click",
+      "target": "name=btn_cadastrar",
+      "targets": [
+        ["name=btn_cadastrar", "name"],
+        ["css=.botao-perigo", "css:finder"],
+        ["xpath=//input[@name='btn_cadastrar']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "c045d21a-825c-46cc-bb4f-266075b73a7a",
+    "name": "alterar console",
+    "commands": [{
+      "id": "9b6ccab1-518d-4528-bcff-913a4e313d92",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/StremGames/administrador",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f1e650b6-466f-41c8-9aec-d229cea208f5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1005x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6afc8d9-61af-4372-a97a-9e5083824263",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(3) > .col:nth-child(2) .botao-form-inverso",
+      "targets": [
+        ["css=.row:nth-child(3) > .col:nth-child(2) .botao-form-inverso", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='homebody']/div[2]/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/a/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Consoles')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4dbc3c2c-d7c5-4fd8-9972-b546b59803c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(11) .botao-form-inverso",
+      "targets": [
+        ["css=.row:nth-child(11) .botao-form-inverso", "css:finder"],
+        ["xpath=(//a[contains(text(),'Alterar')])[3]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost/StremGames/administrador/altera_console/8']", "xpath:href"],
+        ["xpath=//div[5]/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a2fc9d6-a646-4024-9715-6a1c6c1751d0",
+      "comment": "",
+      "command": "click",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a122736-af26-421a-b9f3-773e2f11f2c7",
+      "comment": "",
+      "command": "click",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70416abf-a5cf-4433-86de-3a9fbf897e6c",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25caa31c-7969-4ce7-8aef-c305eaaab700",
+      "comment": "",
+      "command": "click",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95a35e1c-b624-4100-a51f-97951c8738bd",
+      "comment": "",
+      "command": "type",
+      "target": "id=nome",
+      "targets": [
+        ["id=nome", "id"],
+        ["name=nome", "name"],
+        ["css=#nome", "css:finder"],
+        ["xpath=//input[@id='nome']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "Console Alterado"
+    }, {
+      "id": "da9487a2-f4df-4671-b778-28aadbe0ec09",
+      "comment": "",
+      "command": "click",
+      "target": "id=descricao",
+      "targets": [
+        ["id=descricao", "id"],
+        ["name=descricao", "name"],
+        ["css=#descricao", "css:finder"],
+        ["xpath=//textarea[@id='descricao']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cc0db2f-acdc-408d-8b6e-c16a6aed311d",
+      "comment": "",
+      "command": "type",
+      "target": "id=descricao",
+      "targets": [
+        ["id=descricao", "id"],
+        ["name=descricao", "name"],
+        ["css=#descricao", "css:finder"],
+        ["xpath=//textarea[@id='descricao']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "ALTERADO"
+    }, {
+      "id": "798d91ee-970d-4188-8633-f34acdcb67df",
+      "comment": "",
+      "command": "click",
+      "target": "name=btn_cadastrar",
+      "targets": [
+        ["name=btn_cadastrar", "name"],
+        ["css=.botao-confirmacao", "css:finder"],
+        ["xpath=//input[@name='btn_cadastrar']", "xpath:attributes"],
+        ["xpath=//form[@id='form_cadastro']/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b3ee4f99-14d6-40a9-b259-7b4cdca88481",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b5f4b964-cc46-4934-9e82-6a9e6f235142"]
+  }],
+  "urls": ["http://localhost/StremGames/"],
+  "plugins": []
+}
