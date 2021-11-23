@@ -54,6 +54,8 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 //ROTAS CRIADAS
+$route['administrador/adiciona_console'] = 'administrador/form_add_console';
+$route['administrador/altera_console/(:any)'] = 'administrador/form_altera_console/$1';
 $route['cadastro/adicionar'] = 'cliente/adicionar';
 $route['cadastro/confirmar/(:any)'] = 'cliente/confirmar/$1';
 $route['cadastro'] = 'cliente/form_cadastro';

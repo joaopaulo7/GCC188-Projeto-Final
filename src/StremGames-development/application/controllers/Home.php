@@ -12,9 +12,9 @@ class Home extends CI_Controller {
 
     public function index() {
         $this->load->helper('text');
-        $data_header['categorias'] = $this->modelCategorias->listar_categorias();
-        $data_header['consoles'] = $this->modelConsole->listar_consoles();
-        $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->listar_desenvolvedoras();
+        $data_header['categorias'] = $this->modelCategorias->getCategorias();
+        $data_header['consoles'] = $this->modelConsole->getConsoles();
+        $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->getDesenvolvedoras();
         
 		$data_body['destaques'] = $this->modelJogo->destaques_home();
         $this->load->view('html-header');
@@ -26,7 +26,7 @@ class Home extends CI_Controller {
 
 	public function buscar() {
         $this->load->helper('text');
-		$data_header['categorias'] = $this->modelCategorias->listar_categorias();
+		$data_header['categorias'] = $this->modelCategorias->getCategorias();
 		$busca = $this->input->post('txt_busca');
         
 		$data_body['termo'] = $busca;
@@ -34,7 +34,7 @@ class Home extends CI_Controller {
         
         $this->load->view('html-header');
         $this->load->view('header', $data_header);
-        $this->load->view('home', $data_body);
+        $this->load->view('busca', $data_body);
         $this->load->view('footer');
         $this->load->view('html-footer');
  		

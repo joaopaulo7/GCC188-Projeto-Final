@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
     
-class Categorias extends CI_Controller {
+class Categoria extends CI_Controller {
             
     public function __construct() {
         parent::__construct();
@@ -10,7 +10,7 @@ class Categorias extends CI_Controller {
         $this->categorias = $this->modelCategorias->listar_categorias();
         
         $this->load->model('console_model', 'modelConsole');
-        $this->consoles = $this->modelConsole->listar_consoles();
+        $this->consoles = $this->modelConsole->getConsoles();
         
         $this->load->model('desenvolvedora_model', 'modelDesenvolvedora');
         $this->desenvolvedoras = $this->modelDesenvolvedora->listar_desenvolvedoras();

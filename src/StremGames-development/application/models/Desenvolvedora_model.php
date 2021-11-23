@@ -10,7 +10,7 @@
             parent::__construct();
         }
 
-        public function listar_desenvolvedoras() {
+        public function getDesenvolvedoras() {
             $this->db->order_by('nome', 'ASC');
             return $this->db->get('desenvolvedora')->result();
         }

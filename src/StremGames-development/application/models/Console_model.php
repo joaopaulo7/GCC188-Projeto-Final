@@ -10,51 +10,40 @@
             parent::__construct();
         }
 
-        public function listar_consoles() {
-            $this->db->order_by('nome', 'ASC');
+        public function getConsoles() {
+            $this->db->select('id_console, nome');
             return $this->db->get('console')->result();
         }
 
-        public function detalhes_cconsole($id) {
-            $this->db->where('id', $id);
-            return $this->db->get('console')->result();
+        public function getConsole($id) {
+            $this->db->where('id_console', $id);
+            return $this->db->get('console')->result()[0];
         }
 
-        public function listar_produtos_categoria($id) {
-            $dados['detalhes'] = $this->detalhes_categoria($id);
-            $this->db->select('*');
-            $this->db->from('produtos');
-            $this->db->join('produtos_categoria', 'produtos_categoria.produto = produtos.id AND produtos_categoria.categoria = '.$id);
-            $dados['produtos'] = $this->db->get()->result();
-            return $dados;
-        }
-
-        public function getCategoria( $id){
-            $res = $this->db->get_where('console',' id_console = '.$id)->result()[0];
-            if( $res == null)
-                return null;
-            else
-                return $res;
-        }
-
-        public function addNovo( $dados){
-            $this->db->insert('console',  array( 'titulo' =>$dados['titulo'], 'descricao' =>$dados['descricao']));
+        public function adiciona( $dados){
+            $this->db->insert('console',  $dados);
         }
 
         public function alterar( $dados){
-            $this->db->where(' id_console', $dados["id"]);
-            $this->db->update('console', array( 'titulo' =>$dados['titulo'], 'descricao' =>$dados['descricao']));
+            $this->db->where(' id_console', $dados['id_console']);
+            $this->db->update('console', $dados);
         }
         
         public function podeDel( $id){
-			if( $this->db->get_where('jogo', 'console ='. $id)->result() != null)
+			if( $this->db->get_where('jogo', 'Console_id_console ='. $id)->result() != null)
 				return false;
 			else
 				return true;
 		}
 		
-		public function del( $id){
-			$this->db->where("id_console", $id);
-			$this->db->delete("console");
+		public function remove( $id){
+            if($this->podeDel($id))
+            {
+                $this->db->where("id_console", $id);
+                $this->db->delete("console");
+                return TRUE;
+            }
+            else
+                return FALSE;
 		}
     }

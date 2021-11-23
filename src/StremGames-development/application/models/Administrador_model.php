@@ -17,7 +17,7 @@ class Administrador_model extends CI_Model {
         
         if( $adm->senha == hash("sha256", $input->post('senha') . $adm->salt))
         {
-            $dadosSessao['cliente'] = $adm;
+            $dadosSessao['administrador'] = $adm;
             $dadosSessao['logado'] = TRUE;
             $this->session->set_userdata($dadosSessao);
             return TRUE;

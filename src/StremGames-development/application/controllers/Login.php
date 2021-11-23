@@ -8,13 +8,15 @@
             $this->load->model('categorias_model', 'modelCategorias');
             $this->load->model('console_model', 'modelConsole');
             $this->load->model('desenvolvedora_model', 'modelDesenvolvedora');
+            $this->load->model('cliente_model', 'clienteModel');
+            $this->load->model('administrador_model', 'administradorModel');
         }
 
         public function index() {
             $this->load->helper('text');
-            $data_header['categorias'] = $this->modelCategorias->listar_categorias();
-            $data_header['consoles'] = $this->modelConsole->listar_consoles();
-            $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->listar_desenvolvedoras();
+            $data_header['categorias'] = $this->modelCategorias->getCategorias();
+            $data_header['consoles'] = $this->modelConsole->getConsoles();
+            $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->getDesenvolvedoras();
             
             $data_header['categorias'] = $this->categorias;
             $this->load->view('html-header');
@@ -26,9 +28,9 @@
 
         public function esqueci_minha_senha() {
             $this->load->helper('text');
-            $data_header['categorias'] = $this->modelCategorias->listar_categorias();
-            $data_header['consoles'] = $this->modelConsole->listar_consoles();
-            $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->listar_desenvolvedoras();
+            $data_header['categorias'] = $this->modelCategorias->getCategorias();
+            $data_header['consoles'] = $this->modelConsole->getConsoles();
+            $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->getDesenvolvedoras();
             
             $this->load->view('html-header');
             $this->load->view('header', $data_header);
@@ -60,9 +62,9 @@
 
                 if($this->email->send()) {
                     $this->load->helper('text');
-                    $data_header['categorias'] = $this->modelCategorias->listar_categorias();
-                    $data_header['consoles'] = $this->modelConsole->listar_consoles();
-                    $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->listar_desenvolvedoras();
+                    $data_header['categorias'] = $this->modelCategorias->getCategorias();
+                    $data_header['consoles'] = $this->modelConsole->getConsoles();
+                    $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->getDesenvolvedoras();
                     
                     $this->load->view('html-header');
                     $this->load->view('header', $data_header);
@@ -80,9 +82,9 @@
 
         public function form_login($erro = FALSE) {
             $this->load->helper('text');
-            $data_header['categorias'] = $this->modelCategorias->listar_categorias();
-            $data_header['consoles'] = $this->modelConsole->listar_consoles();
-            $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->listar_desenvolvedoras();
+            $data_header['categorias'] = $this->modelCategorias->getCategorias();
+            $data_header['consoles'] = $this->modelConsole->getConsoles();
+            $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->getDesenvolvedoras();
             
             $data_login['erro'] = $erro;
             $this->load->view('html-header');
@@ -105,17 +107,15 @@
 				if($this->clienteModel->valida_login($this->input))
 					redirect(base_url("home"));
 				else if($this->administradorModel->valida_login($this->input))
-                    redirect(base_url("home"));
+                    redirect(base_url("administrador"));
                 else
 					$this->form_login(TRUE);
             }
         }
 
         public function logout() {
-            $dadosSessao['cliente'] = null;
-            $dadosSessao['logado'] = FALSE;
-            $this->session->set_userdata($dadosSessao);
-            redirect(base_url("login"));
+            $this->session->sess_destroy();
+            redirect(base_url("Home"));
         }
 
     }

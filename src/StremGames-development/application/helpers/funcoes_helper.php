@@ -24,3 +24,7 @@
 		$campos = explode("-", $data);
 		return date("Y-m-d", strtotime($campos[0]."/".$campos[1]."/".$campos[2]));
 	}
+    
+    function removePonto($data) {
+        return str_replace('.','', $data);
+	}

@@ -10,7 +10,7 @@
             parent::__construct();
         }
 
-        public function listar_categorias() {
+        public function getCategorias() {
             $this->db->order_by('titulo', 'ASC');
             return $this->db->get('categoria')->result();
         }

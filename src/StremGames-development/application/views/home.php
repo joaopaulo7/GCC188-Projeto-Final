@@ -6,8 +6,9 @@
 			foreach($destaques as $destaque) {
 				$contador++;
 				echo "<div class='col amostra'>" . 
-                    "<a href = '".base_url("jogo/info/".$destaque->id_jogo . "/" . limpar($destaque->titulo))."' style= 'color: black; text-decoration: none;'>".
-                    img(base_url("/assets/img/jogos/".$destaque->id_jogo."/".$destaque->image)).
+                    "<a href = '".base_url("jogo/info/".$destaque->id_jogo)."' style= 'color: black; text-decoration: none;'>".
+                        img(base_url("/assets/img/jogos/". removePonto($destaque->codigo).".jpg")).
+                        img(base_url("/assets/img/jogos/". removePonto($destaque->codigo).".png")).
 					heading(word_limiter($destaque->titulo, 3), 3) . 
                     "<p>".word_limiter($destaque->descricao, 20) . "</p>" . 
                     "</a>".

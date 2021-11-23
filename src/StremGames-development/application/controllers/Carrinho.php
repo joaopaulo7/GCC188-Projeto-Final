@@ -14,9 +14,9 @@ class Carrinho extends CI_Controller {
 
     public function index() {
         $this->load->helper('text');
-        $data_header['categorias'] = $this->modelCategorias->listar_categorias();
-        $data_header['consoles'] = $this->modelConsole->listar_consoles();
-        $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->listar_desenvolvedoras();
+        $data_header['categorias'] = $this->modelCategorias->getCategorias();
+        $data_header['consoles'] = $this->modelConsole->getConsoles();
+        $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->getDesenvolvedoras();
             
         //limitando a quantidade de jogos pra 1
         foreach($this->cart->contents() as $item)
@@ -27,9 +27,9 @@ class Carrinho extends CI_Controller {
                 $this->cart->update($data);
             }
         }
-        $data_header['categorias'] = $this->modelCategorias->listar_categorias();
-        $data_header['consoles'] = $this->modelConsole->listar_consoles();
-        $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->listar_desenvolvedoras();
+        $data_header['categorias'] = $this->modelCategorias->getCategorias();
+        $data_header['consoles'] = $this->modelConsole->getConsoles();
+        $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->getDesenvolvedoras();
         
         $this->load->view('html-header');        
         $this->load->view('header', $data_header);
@@ -46,7 +46,7 @@ class Carrinho extends CI_Controller {
                     'price' => $this->input->post('preco'),
                     'name' => limpa_nome($this->input->post('nome')),
                     'url' => $this->input->post('url'),
-                    'image' => $this->input->post('image'));
+                    'codigo' => $this->input->post('codigo'));
         
         $this->cart->insert($data);
         echo $this->cart->total_items();
@@ -91,10 +91,9 @@ class Carrinho extends CI_Controller {
 
 
     public function form_pagamento() {
-        
-        $data_header['categorias'] = $this->modelCategorias->listar_categorias();
-        $data_header['consoles'] = $this->modelConsole->listar_consoles();
-        $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->listar_desenvolvedoras();
+        $data_header['categorias'] = $this->modelCategorias->getCategorias();
+        $data_header['consoles'] = $this->modelConsole->getConsoles();
+        $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->getDesenvolvedoras();
         
         $this->load->view('html-header');
         $this->load->view('header', $data_header);

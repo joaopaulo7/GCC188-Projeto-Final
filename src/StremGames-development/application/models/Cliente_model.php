@@ -30,26 +30,6 @@ class Cliente_model extends CI_Model {
             return FALSE;
         }
     }
-            //ARRUMAR ISSO E COLOCAR NO MODEL DE ADMINISTRAOR
-            /*
-            $this->db->where('email', $this->input->post('email'));
-            $this->db->where('status', 42);
-            $adm = $this->db->get('administracao')->result();
-            $adm = $adm[0];
-            
-            if( $adm->senha == hash("sha256", $input->post('senha') . $adm->salt))
-            {
-                $dadosSessao['cliente'] = $adm;
-                $dadosSessao['logado'] = TRUE;
-                $this->session->set_userdata($dadosSessao);
-                return TRUE;
-            }else{
-                $dadosSessao['cliente'] = NULL;
-                $dadosSessao['logado'] = FALSE;
-                $this->session->set_userdata($dadosSessao);
-                return FALSE;
-            }
-            */
     
     public function adicionar($dados){
         $dados['status'] = 0;
@@ -60,12 +40,7 @@ class Cliente_model extends CI_Model {
         $dados['status'] = 1;
         $this->db->where('salt', $hashEmail);
         if($this->db->update('clientes', $dados)) {
-            $data_header['categorias'] = $this->categorias;
-            $this->load->view('html-header');
-            $this->load->view('header', $data_header);
-            $this->load->view('cadastro_completo');
-            $this->load->view('footer');
-            $this->load->view('html-footer');
+            redirect('/');
         } else {
             echo "Houve um erro ao confirmar seu cadastro";
         }

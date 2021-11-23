@@ -7,7 +7,8 @@
         echo form_hidden('qty', 1) .
         "<div class='row'>
             <div class='col-auto me-auto col-1'>" .
-                img(base_url("/assets/img/jogos/".$item['id']."/".$item['image'])).
+                img(base_url("/assets/img/jogos/".$item['codigo'].".jpg")).
+                img(base_url("/assets/img/jogos/".$item['codigo'].".png")).
             "</div>
             <div class='col'>
                 <h3 style='float: left;'>" .
