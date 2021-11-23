@@ -27,6 +27,8 @@ class Home extends CI_Controller {
 	public function buscar() {
         $this->load->helper('text');
 		$data_header['categorias'] = $this->modelCategorias->getCategorias();
+        $data_header['consoles'] = $this->modelConsole->getConsoles();
+        $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->getDesenvolvedoras();
 		$busca = $this->input->post('txt_busca');
         
 		$data_body['termo'] = $busca;

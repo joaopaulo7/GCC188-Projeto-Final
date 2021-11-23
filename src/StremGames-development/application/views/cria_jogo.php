@@ -52,7 +52,7 @@
             form_label('Imagem de Disco(ISO, cue, etc...)', 'imagem', array('class'=>'rotulo-forms')) . br().
             form_upload(array('id'=>'imagem', 'name'=>'imagem', 'required'=> 0)) . br(). br().
             
-            form_label('Imagem da Capa (jpg, png, etc..)', 'imagemCapa', array('class'=>'rotulo-forms')) . br().
+            form_label('Imagem da Capa (JPG)', 'imagemCapa', array('class'=>'rotulo-forms')) . br().
             form_upload(array('id'=>'imagemCapa', 'name'=>'imagemCapa', 'required'=> 0)) . br(). br(). 
             
             "<hr>".

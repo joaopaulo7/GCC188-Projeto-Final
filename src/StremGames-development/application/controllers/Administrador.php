@@ -145,18 +145,18 @@
             $this->load->view('html-footer');
         }
 
-        public function remove_jogo($id){
+        public function form_remove_jogo($id){
             //busca no banco
             $this->load->library('upload');
             $this->load->model('jogo_model', 'modelJogo');
-            $data_body['podeDel'] = $this->modelConsole->podeDel($id);
-            $data_body['jogo'] = $this->modelJogo->getJogo();
+            $data_body['podeDel'] = $this->modelJogo->podeDel($id);
+            $data_body['jogo'] = $this->modelJogo->getJogo($id);
             
             
             //carrega view
             $this->load->view('html-header');
             $this->load->view('headerAdm');
-            $this->load->view('remove_console', $data_body);
+            $this->load->view('remove_jogo', $data_body);
             $this->load->view('footer');
             $this->load->view('html-footer');
         }

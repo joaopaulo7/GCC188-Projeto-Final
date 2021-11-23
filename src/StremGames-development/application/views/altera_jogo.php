@@ -67,7 +67,7 @@
             "<span style='margin-left: 20px;'> <i>deixe vazio se quiser manter como está</i> </span>".br().
             form_upload(array('id'=>'imagem', 'name'=>'imagem')) . br(). br().
             
-            form_label('Imagem da Capa (jpg, png, etc..)', 'imagemCapa', array('class'=>'rotulo-forms')) . br().
+            form_label('Imagem da Capa (JPG)', 'imagemCapa', array('class'=>'rotulo-forms')) . br().
             "<span style='margin-left: 20px;'> <i>deixe vazio se quiser manter como está</i> </span>".br().
             form_upload(array('id'=>'imagemCapa', 'name'=>'imagemCapa')) . br(). br(). 
             

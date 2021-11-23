@@ -49,7 +49,7 @@ class Jogo extends CI_Controller {
         $this->modelJogo->adicionar($dados);
          
         $config['upload_path']          = './assets/img/jogos';
-        $config['allowed_types']        = 'gif|jpg|png|jpeg';
+        $config['allowed_types']        = 'jpg|jpeg';
         $config['max_size']             = 1000;
         $config['max_width']            = 1920;
         $config['max_height']           = 1080;
@@ -87,7 +87,7 @@ class Jogo extends CI_Controller {
         $this->modelJogo->alterar($dados);
          
         $config['upload_path']          = './assets/img/jogos';
-        $config['allowed_types']        = 'gif|jpg|png|jpeg';
+        $config['allowed_types']        = 'jpg|jpeg';
         $config['max_size']             = 2000;
         $config['max_width']            = 1920;
         $config['max_height']           = 1080;
@@ -117,4 +117,23 @@ class Jogo extends CI_Controller {
         
         redirect(base_url("administrador/jogos/7"));
     }
+    
+    public function remover(){
+        if( $this->session->userdata('administrador')->status != 7){
+            $this->session->sess_destroy();
+            redirect(base_url("login"));
+        }
+        
+        
+        $id = $this->input->post('numero');
+        
+        if($this->modelJogo->podeDel($id))
+            $this->modelJogo->remover($id);
+        else
+            $this->modelJogo->inativar($id);
+        
+        
+        redirect(base_url("administrador/jogos/7"));
+    }
+    
 }

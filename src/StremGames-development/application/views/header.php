@@ -47,7 +47,7 @@
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
                                     <?php
                                         foreach($consoles as $console) {
-                                            echo "<li>".anchor(base_url("console/".$console->id_console."/".limpar($console->nome)), $console->nome, array("class"=>"dropdown-item"))."</li>";
+                                            echo "<li>".anchor(base_url("console/".$console->id_console), $console->nome, array("class"=>"dropdown-item"))."</li>";
                                         }
                                     ?>
                                     </ul>

@@ -29,6 +29,11 @@ class Jogo_model extends CI_Model {
         return $res;
     }
 
+    public function getJogo($id){
+        $this->db->where('id_jogo = '. $id);
+        return $this->db->get('jogo')->result()[0];
+    }
+
     public function getJogos(){
 		$this->db->select('id_jogo, titulo, Console_id_console')->get_compiled_select();
         $ress = $this->db->get('jogo')->result();
@@ -46,6 +51,7 @@ class Jogo_model extends CI_Model {
 	public function destaques_home() {
 		$this->db->order_by('id_jogo', 'random');
 		$this->db->select('id_jogo, codigo, titulo, descricao')->get_compiled_select();
+        $this->db->where('ativo', 1);
         $ress = $this->db->get('jogo')->result();
         return $ress;
 	}
@@ -58,6 +64,20 @@ class Jogo_model extends CI_Model {
         $ress = $this->db->get('jogo')->result();
         return $ress;
 	}
+
+    public function podeDel($id){
+        $this->db->select('*');
+        $this->db->where('jogo_id_jogo = '. $id);
+        if($this->db->get('jogo_a_pagar')->result() != null)
+            return FALSE;
+            
+        $this->db->select('*');
+        $this->db->where('jogo_id_jogo = '. $id);
+        if($this->db->get('biblioteca')->result() != null)
+            return FALSE;
+        
+        return TRUE;
+    }
 
     public function adicionar($dados){
         $this->load->helper('file');
@@ -126,6 +146,22 @@ class Jogo_model extends CI_Model {
         foreach($desenvolvedoras as $desenvolvedora){
             $this->db->insert('jogo_has_desenvolvedora',  array('jogo_id_jogo'=>$id, 'jogo_Console_id_console' =>$dados['Console_id_console'], 'desenvolvedora_id_desenvolvedora'=>$desenvolvedora));
         }
+    }
+
+    public function remover($id){
+        $this->db->where('jogo_id_jogo = '. $id);
+        $this->db->delete('jogo_has_categoria');
+        
+        $this->db->where('jogo_id_jogo = '. $id);
+        $this->db->delete('jogo_has_desenvolvedora');
+        
+        $this->db->where('id_jogo', $id);
+        $this->db->delete('jogo');
+    }
+
+    public function inativar($id){
+        $this->db->where('id_jogo', $id);
+        $this->db->update('jogo',  array('ativo'=> 0));
     }
 
 }

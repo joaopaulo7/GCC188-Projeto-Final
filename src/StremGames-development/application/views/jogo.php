@@ -26,7 +26,7 @@
             echo heading($jogo->titulo." (".$jogo->codigo.")", 2); 
             
             echo "<hr>";
-            echo "<span>Console: </span> <a href='".$jogo->console->id_console."'>".$jogo->console->nome."</a>";
+            echo "<span>Console: </span> <a href='".base_url('/console/'.$jogo->console->id_console)."'>".$jogo->console->nome."</a>";
             echo "<hr>";
             
             echo "<span>Categorias: </span>";

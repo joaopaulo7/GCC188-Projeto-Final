@@ -7,7 +7,7 @@ class Console extends CI_Controller {
         $this->load->model('console_model', 'modelConsole');
     }
     
-    public function index() {
+    public function index($id) {
         $this->load->helper('text');
         
         $this->load->model('jogo_model', 'modelJogo');
@@ -20,6 +20,7 @@ class Console extends CI_Controller {
         $this->load->model('desenvolvedora_model', 'modelDesenvolvedora');
         $data_header['desenvolvedoras'] = $this->modelDesenvolvedora->getDesenvolvedoras();
         
+        $data_pagina['console']  = $this->modelConsole->getConsole($id);
         
         $this->load->view('html-header');
         $this->load->view('header', $data_header);
