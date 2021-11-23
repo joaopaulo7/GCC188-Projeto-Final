@@ -40,3 +40,32 @@
   <li><b>Servidor:</b> Apache 2.4.51 </li>
   <li><b>Sis. de Banco de dados:</b> MySQL 8.0.27</li>
 </ul>
+
+## Commits e Branches
+- Regras de commit
+  - ``Implementado:`` Uma nova funcionadlidade
+ 
+  - ``Correção:`` Correções de bugs e problemas na documentação
+    
+  - ``Ajuste:`` Refatorações de funcionalidades que não sejam merlhorias nem correções
+    
+    
+- Regras de uso de branch
+  - Branches alternativos podem ser feitos por qualquer pessoa.
+
+- Pull Request
+  -  Todos Pull Requests serão negados caso sejam feitos por pessoas que não são membor do grupo de desenvolvimento. 
+
+
+## Estrutura de Pastas
+```
+raiz/
+└── docs (Documentação)
+| └── Diagramas
+| └── Definição de Requisitos
+| └── Padrões Adotados
+| └── teste
+└── src (Códigos)
+```
+- docs (Documentação)
+- src (Códigos)
