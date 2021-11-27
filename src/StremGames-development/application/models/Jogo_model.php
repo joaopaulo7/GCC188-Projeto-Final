@@ -103,10 +103,10 @@ class Jogo_model extends CI_Model {
         
         //Adiciona nas tabelas relacionais
         foreach($categorias as $categoria)
-            $this->db->insert('jogo_has_categoria',  array('jogo_id_jogo'=>$id, 'jogo_Console_id_console' =>$dados['Console_id_console'], 'categoria_id_categoria'=>$categoria));
+            $this->db->insert('jogo_has_categoria',  array('jogo_id_jogo'=>$id,  'categoria_id_categoria'=>$categoria));
         
         foreach($desenvolvedoras as $desenvolvedora)
-            $this->db->insert('jogo_has_desenvolvedora',  array('jogo_id_jogo'=>$id, 'jogo_Console_id_console' =>$dados['Console_id_console'], 'desenvolvedora_id_desenvolvedora'=>$desenvolvedora));
+            $this->db->insert('jogo_has_desenvolvedora',  array('jogo_id_jogo'=>$id, 'desenvolvedora_id_desenvolvedora'=>$desenvolvedora));
     }
 
     public function alterar($dados){
@@ -115,11 +115,12 @@ class Jogo_model extends CI_Model {
         $categorias = $dados['categorias'];
         $desenvolvedoras = $dados['desenvolvedoras'];
         $id = $dados['id_jogo'];
+        $dados['Console_id_console'] = $dados['console'];
+        unset($dados['console']);
         unset($dados['categorias']);
         unset($dados['desenvolvedoras']);
     
         //disconsidera os que não podem ser alterados.
-        unset($dados['console']);
         unset($dados['codigo']);
         unset($dados['btn_cadastrar']);
         
@@ -127,24 +128,24 @@ class Jogo_model extends CI_Model {
         $this->db->where('id_jogo = '. $id);
         $this->db->update('jogo',  $dados);
         
-        $this->db->select('Console_id_console, codigo');
+        $this->db->select(' codigo');
         $this->db->where('id_jogo = '. $id);
         $res = $this->db->get('jogo')->result()[0];
         
-        $dados['Console_id_console'] = $res->Console_id_console;
+        
         $dados['codigo'] = $res->codigo;
         
         //Adiciona nas tabelas relacionais
         $this->db->where('jogo_id_jogo = '. $id);
         $this->db->delete('jogo_has_categoria');
         foreach($categorias as $categoria){
-            $this->db->insert('jogo_has_categoria',  array('jogo_id_jogo'=>$id, 'jogo_Console_id_console' =>$dados['Console_id_console'], 'categoria_id_categoria'=>$categoria));
+            $this->db->insert('jogo_has_categoria',  array('jogo_id_jogo'=>$id, 'categoria_id_categoria'=>$categoria));
         }
         
         $this->db->where('jogo_id_jogo = '. $id);
         $this->db->delete('jogo_has_desenvolvedora');
         foreach($desenvolvedoras as $desenvolvedora){
-            $this->db->insert('jogo_has_desenvolvedora',  array('jogo_id_jogo'=>$id, 'jogo_Console_id_console' =>$dados['Console_id_console'], 'desenvolvedora_id_desenvolvedora'=>$desenvolvedora));
+            $this->db->insert('jogo_has_desenvolvedora',  array('jogo_id_jogo'=>$id, 'desenvolvedora_id_desenvolvedora'=>$desenvolvedora));
         }
     }
 
