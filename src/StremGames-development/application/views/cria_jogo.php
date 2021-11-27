@@ -12,7 +12,7 @@
             echo form_open_multipart(base_url('jogo/adicionar')). 
             
             form_label('Codigo', 'codigo', array('class'=>'rotulo-forms')) . br().
-            form_input(array('id'=>'codigo', 'name'=>'codigo', 'Placeholder'=> 'ex: EU.5047', 'class'=>'col-4 campo-form', 'required'=> 0)) . br(). br().
+            form_input(array('id'=>'codigo', 'name'=>'codigo', 'Placeholder'=> 'ex: EU5047', 'class'=>'col-4 campo-form', 'required'=> 0)) . br(). br().
             
             form_label('Titulo', 'titulo', array('class'=>'rotulo-forms')) . br().
             form_input(array('id'=>'titulo', 'name'=>'titulo', 'Placeholder'=> 'ex: FInal Fantasy VII', 'class'=>'col-4 campo-form', 'required'=> 0)) . br(). br().
