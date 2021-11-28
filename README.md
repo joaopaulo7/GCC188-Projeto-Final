@@ -41,6 +41,7 @@
   <li><b>Sis. de Banco de dados:</b> MySQL 8.0.27</li>
 </ul>
 <br>
+
 ## Instalação
 <ol>
   <li>Cole os códigos base no seu servidor web.</li>
@@ -50,6 +51,7 @@
   <li>Certifique-se que a sobreescrição de links está permitida no seu servidor apache.</li>
   <li>Certifique-se que a aplicação tem permissão alterar a pasta <i>/assests</i>.</li>
 </ol>
+<br>
 
 ## Commits e Branches
 - Regras de commit
@@ -66,6 +68,7 @@
 - Pull Request
   -  Todos Pull Requests serão negados caso sejam feitos por pessoas que não são membor do grupo de desenvolvimento. 
 
+<br>
 
 ## Estrutura de Pastas
 ```
