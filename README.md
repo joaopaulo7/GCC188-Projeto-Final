@@ -40,6 +40,16 @@
   <li><b>Servidor:</b> Apache 2.4.51 </li>
   <li><b>Sis. de Banco de dados:</b> MySQL 8.0.27</li>
 </ul>
+<br>
+## Instalação
+<ul>
+  <li><b>1. </b>Cole os códigos base no seu servidor web</li>
+  <li><b>2. </b>Execute o script de criação do Banco de Dados contido em /src</li>
+  <li><b>3. </b>Configure a url base do site em <i>StremGames/application/condig/config.php</i></li>
+  <li><b>4. </b>Configure as informações do dados do banco de dados em <i>StremGames/application/condig/database.php</i></li>
+  <li><b>5. </b>Certifique-se que a sobreescrição de links está permitida no seu servidor apache</li>
+  <li><b>6. </b>Certifique-se que a aplicação tem permissão alterar a pasta <i>/assests</i></li>
+</ul>
 
 ## Commits e Branches
 - Regras de commit
