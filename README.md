@@ -70,7 +70,7 @@
 ## Estrutura de Pastas
 ```
 raiz/
-└── docs (Documentação)
+├── docs (Documentação)
 │ └── Diagramas
 │ └── Definição de Requisitos
 │ └── Padrões Adotados
