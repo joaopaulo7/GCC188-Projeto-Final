@@ -5,7 +5,7 @@
   "url": "http://localhost/StremGames/",
   "tests": [{
     "id": "b5f4b964-cc46-4934-9e82-6a9e6f235142",
-    "name": "login Cliente",
+    "name": "1-login Cliente",
     "commands": [{
       "id": "62ca4e8d-e899-4772-ad1e-ea0428bc1ad7",
       "comment": "",
@@ -55,7 +55,7 @@
     }]
   }, {
     "id": "e46695fa-6b76-4923-91b3-469322b15a88",
-    "name": "logout",
+    "name": "2-logout",
     "commands": [{
       "id": "82eec70f-e628-43d3-aa33-a1c30eab5841",
       "comment": "",
@@ -77,7 +77,7 @@
     }]
   }, {
     "id": "14506979-d43a-4e74-9a82-7f7df40bdf16",
-    "name": "login administrador",
+    "name": "3-login administrador",
     "commands": [{
       "id": "ad9b2e1b-1f90-4460-857f-a4dcdea4ce53",
       "comment": "",
@@ -104,7 +104,7 @@
       "command": "type",
       "target": "id=email",
       "targets": [],
-      "value": "adm@eusouoadm.adm"
+      "value": "adm@eusouoademir.com"
     }, {
       "id": "bf2ab0b4-0340-44ad-8d15-a478a2e50af7",
       "comment": "",
@@ -127,7 +127,7 @@
     }]
   }, {
     "id": "969b6114-7310-45cf-8a37-6ce33fbfea92",
-    "name": "criar console",
+    "name": "4-criar console",
     "commands": [{
       "id": "f152a229-b212-4c46-8486-25dbf7b49f23",
       "comment": "",
@@ -220,7 +220,7 @@
     }]
   }, {
     "id": "9d6c5b08-d614-4a80-a06d-9ff01140baef",
-    "name": "remover console",
+    "name": "6-remover console",
     "commands": [{
       "id": "29b03591-bce7-4c51-a99b-e0783083240c",
       "comment": "",
@@ -346,7 +346,7 @@
     }]
   }, {
     "id": "c045d21a-825c-46cc-bb4f-266075b73a7a",
-    "name": "alterar console",
+    "name": "5-alterar console",
     "commands": [{
       "id": "9b6ccab1-518d-4528-bcff-913a4e313d92",
       "comment": "",
