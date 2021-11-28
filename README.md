@@ -42,14 +42,14 @@
 </ul>
 <br>
 ## Instalação
-<ul>
-  <li><b>1. </b>Cole os códigos base no seu servidor web</li>
-  <li><b>2. </b>Execute o script de criação do Banco de Dados contido em /src</li>
-  <li><b>3. </b>Configure a url base do site em <i>StremGames/application/condig/config.php</i></li>
-  <li><b>4. </b>Configure as informações do dados do banco de dados em <i>StremGames/application/condig/database.php</i></li>
-  <li><b>5. </b>Certifique-se que a sobreescrição de links está permitida no seu servidor apache</li>
-  <li><b>6. </b>Certifique-se que a aplicação tem permissão alterar a pasta <i>/assests</i></li>
-</ul>
+<ol>
+  <li>Cole os códigos base no seu servidor web.</li>
+  <li>Execute o script de criação do Banco de Dados contido em src.</li>
+  <li>Configure a url base do site em <i>StremGames/application/condig/config.php</i>.</li>
+  <li>Configure as informações do dados do banco de dados em <i>StremGames/application/condig/database.php</i>.</li>
+  <li>Certifique-se que a sobreescrição de links está permitida no seu servidor apache.</li>
+  <li>Certifique-se que a aplicação tem permissão alterar a pasta <i>/assests</i>.</li>
+</ol>
 
 ## Commits e Branches
 - Regras de commit
@@ -71,10 +71,10 @@
 ```
 raiz/
 └── docs (Documentação)
-| └── Diagramas
-| └── Definição de Requisitos
-| └── Padrões Adotados
-| └── teste
+│ └── Diagramas
+│ └── Definição de Requisitos
+│ └── Padrões Adotados
+│ └── teste
 └── src (Códigos)
 ```
 - docs (Documentação)
