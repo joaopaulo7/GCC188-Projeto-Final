@@ -97,10 +97,7 @@ class Jogo extends CI_Controller {
         $this->load->library('upload', $config);
         $this->upload->initialize( $config, TRUE);
         if( !$this->upload->do_upload('imagemCapa'))
-        {
             echo $this->upload->display_errors();
-            echo var_dump($this->upload->data());
-        }
         
         unset($config);
         $config['upload_path']          = './assets/isos';
